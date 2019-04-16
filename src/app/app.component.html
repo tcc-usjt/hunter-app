@@ -1,0 +1,20 @@
+﻿<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/" style="color: #fff">TechCia</a>
+        <a class="nav-item nav-link" (click)="logout()">Sair</a>
+    </div>
+</nav>
+
+<!-- main app container -->
+<div class="container">
+    <div class="row">
+        <h1>
+            TECH CIA
+        </h1>
+        <div class="col-sm-5 offset-sm-3 authentication">
+            <alert></alert>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
